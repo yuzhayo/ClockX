@@ -156,7 +156,54 @@ const DropdownGroup = ({ title, groupKey, children }) => {
 └── backend/                         # FastAPI backend (unused)
 ```
 
-## Latest Changes by Current Agent (Session ID: 2025-01-21-v7-FLOATING-REFACTORING)
+## Latest Changes by Current Agent (Session ID: 2025-01-21-v8-SIMPLIFIED-FLOATING)
+
+### 🎯 Simplified Floating Settings Implementation
+
+1. **Bug Fixes Applied**:
+   ✅ **TypeScript Error Fixed**: Added proper null checking in drag handler
+   ✅ **State Logic Corrected**: Fixed `isVisible={isVisible && !isExpanded}` logic
+   ✅ **Event Propagation Fixed**: Added `e.stopPropagation()` to prevent conflicts
+   ✅ **Reset Logic Added**: Proper state cleanup with `useEffect` dependencies
+
+2. **Simplified User Interface**:
+   ✅ **Removed Red X Button**: Clean single blue gear icon only
+   ✅ **Triple-tap Toggle**: Triple-tap shows/hides icon (no separate close button needed)
+   ✅ **Gesture Logic Enhanced**: Smart toggle based on current settings visibility state
+   ✅ **Tooltip Updated**: Clear user guidance for both interaction methods
+
+3. **Current User Flow**:
+   ✅ **Triple-tap anywhere** → Blue gear icon appears/disappears
+   ✅ **Click blue icon** → Settings panel should expand
+   ✅ **Click "−" in panel** → Panel minimizes back to icon
+   ✅ **Triple-tap when visible** → Complete close (icon disappears)
+
+### 🚫 Current Issue Identified:
+- **Icon Click Bug**: Settings screen still not appearing when user taps the blue icon
+- **Root Cause**: Likely in state management or component interaction between floating components
+
+### 🎨 Current UI State (POST-SIMPLIFIED-IMPLEMENTATION)
+- **Main Screen**: Always 100% width, dark theme, unaffected by settings
+- **Floating Icon**: Single 40px blue circular gear icon, top-left positioned
+- **Triple-tap Behavior**: Toggle show/hide icon with console logging
+- **Panel State**: Should expand when icon clicked but currently not working
+- **Debug Logs**: Added comprehensive console logging for troubleshooting
+
+### 🔧 Technical Architecture (CURRENT STATE)
+```
+LauncherMainScreen.tsx                        # Triple-tap gesture → toggle settings visibility
+├── LauncherSettingScreen.tsx                 # State management + floating orchestration
+    ├── LauncherSettingScreenFloatingIcon.tsx     # Single blue gear icon (40px)
+    ├── LauncherSettingScreenDragHandler.tsx      # Panel drag functionality
+    ├── LauncherSettingScreenPinchZoom.tsx        # Zoom detection (touch + wheel)
+    └── LauncherSettingScreenContent.tsx          # Dropdown content system
+```
+
+### 🐛 Debug Status:
+- Console logging shows proper triple-tap detection
+- Icon appears and disappears correctly
+- Icon click handler called but panel expansion failing
+- Need to consolidate floating logic files for easier debugging
 
 ### 🎯 Major Floating Settings Architecture Implementation
 
