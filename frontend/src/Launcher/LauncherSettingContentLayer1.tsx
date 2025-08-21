@@ -52,15 +52,6 @@ const LauncherSettingContentLayer1: React.FC<LauncherSettingContentLayer1Props> 
           }}
         >
           <span>{title}</span>
-          {!isMainSettings && (
-            <span style={{
-              transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.2s ease',
-              fontSize: '16px'
-            }}>
-              ▼
-            </span>
-          )}
         </button>
 
         {/* Dropdown Content */}
