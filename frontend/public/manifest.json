@@ -1,0 +1,66 @@
+{
+  "name": "Gesture Launcher App",
+  "short_name": "Launcher",
+  "description": "A modern gesture-based launcher with customizable settings",
+  "version": "1.0.0",
+  "build_time": "2024-01-21T00:00:00.000Z",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#2563eb",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 2L2 7l10 5 10-5-10-5z'/%3e%3cpath d='m2 17 10 5 10-5'/%3e%3cpath d='m2 12 10 5 10-5'/%3e%3c/svg%3e",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 2L2 7l10 5 10-5-10-5z'/%3e%3cpath d='m2 17 10 5 10-5'/%3e%3cpath d='m2 12 10 5 10-5'/%3e%3c/svg%3e",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open Settings",
+      "short_name": "Settings",
+      "description": "Open the launcher settings panel",
+      "url": "/?settings=true",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3ccircle cx='12' cy='12' r='3'/%3e%3cpath d='M12 1v6m0 6v6m11-7h-6m-6 0H1m15.5-6.5-4.24 4.24M7.76 7.76 3.52 3.52m12.96 12.96-4.24-4.24M7.76 16.24l-4.24 4.24'/%3e%3c/svg%3e",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='720' viewBox='0 0 1280 720'%3e%3crect width='1280' height='720' fill='%231a1a1a'/%3e%3ctext x='640' y='360' text-anchor='middle' fill='%23e5e5e5' font-size='32' font-family='system-ui'%3eClean Launcher Screen%3c/text%3e%3ctext x='640' y='400' text-anchor='middle' fill='%23888' font-size='16' font-family='system-ui'%3eTriple-tap to open settings%3c/text%3e%3c/svg%3e",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "label": "Main launcher screen with dark theme"
+    }
+  ],
+  "features": [
+    "triple-tap-gestures",
+    "settings-panel",
+    "auto-updates",
+    "offline-support",
+    "pwa-install"
+  ],
+  "update": {
+    "check_interval": 300000,
+    "auto_update": true,
+    "cache_strategy": "cache-first"
+  }
+}
