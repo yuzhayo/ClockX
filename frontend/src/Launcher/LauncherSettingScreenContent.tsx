@@ -63,6 +63,5 @@ const LauncherSettingScreenContent: React.FC<LauncherSettingScreenContentProps> 
     </div>
   );
 };
-};
 
 export default LauncherSettingScreenContent;
