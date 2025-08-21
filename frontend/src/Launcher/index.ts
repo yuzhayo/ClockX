@@ -11,8 +11,7 @@ export * from './types';
 export type {
   GestureEvent,
   ScreenDimensions,
-  DrawableScreenProps,
-  MainScreenProps
+  DrawableScreenProps
 } from './types';
 
 export type {
