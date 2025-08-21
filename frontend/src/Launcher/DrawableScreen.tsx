@@ -91,7 +91,7 @@ const DrawableScreen: React.FC<DrawableScreenProps> = ({
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
           }}
         >
-          <X size={20} />
+          <XIcon size={20} />
         </button>
       </div>
 
