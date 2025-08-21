@@ -40,42 +40,87 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
         }}
       >
-        {/* Close Button - Top Right */}
-        <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-          <h2 style={{
-            color: 'white',
-            fontSize: '18px',
-            fontWeight: '600',
-            margin: 0
-          }}>
-            Settings
-          </h2>
-        </div>
-
+        {/* Save Settings Button */}
         <button
-          onClick={onClose}
+          onClick={onSave}
           style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            width: '32px',
-            height: '32px',
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            gap: '8px',
+            padding: '8px 16px',
+            backgroundColor: '#2563eb',
+            color: 'white',
             border: 'none',
             borderRadius: '6px',
             cursor: 'pointer',
-            color: 'white',
+            fontSize: '14px',
+            fontWeight: '500',
             transition: 'background-color 0.2s'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.backgroundColor = '#1d4ed8';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            e.currentTarget.style.backgroundColor = '#2563eb';
           }}
         >
-          <XIcon size={16} />
+          <SaveIcon size={14} />
+          Save Settings
         </button>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {/* Update Button */}
+          <button
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '8px 12px',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              color: 'white',
+              fontSize: '14px',
+              fontWeight: '500',
+              transition: 'background-color 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            }}
+          >
+            Update
+          </button>
+
+          {/* Close Button */}
+          <button
+            onClick={onClose}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '32px',
+              height: '32px',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              color: 'white',
+              transition: 'background-color 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            }}
+          >
+            <XIcon size={16} />
+          </button>
+        </div>
       </div>
 
       {/* Settings Content */}
