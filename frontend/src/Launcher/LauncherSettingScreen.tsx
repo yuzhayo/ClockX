@@ -87,6 +87,7 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
       <LauncherSettingScreenFloatingIcon
         isVisible={!isExpanded}
         onClick={handleIconClick}
+        onClose={handleClose}
       />
 
       {/* Floating Settings Panel (shown when expanded) */}
