@@ -30,7 +30,12 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
     setIsExpanded(true);
   };
 
-  // Handle panel close
+  // Handle panel minimize (back to icon)
+  const handleMinimize = () => {
+    setIsExpanded(false);
+  };
+
+  // Handle complete close (hide entire system)
   const handleClose = () => {
     setIsExpanded(false);
     onClose();
