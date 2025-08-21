@@ -1,11 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { SettingScreenProps } from './LauncherIndex';
+import { SettingsManager, AppSettings, DEFAULT_SETTINGS } from './LauncherSettingsManager';
+import { useUpdateManager } from './LauncherUpdateManager';
 
 const SettingScreen: React.FC<SettingScreenProps> = ({ 
   isVisible, 
   onClose, 
   onSave 
 }) => {
+  const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
+  const [hasChanges, setHasChanges] = useState(false);
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'success' | 'error'>('idle');
+  const { status: updateStatus, forceUpdate, checkForUpdates } = useUpdateManager();
+
+  // Load settings on mount
+  useEffect(() => {
+    const loadedSettings = SettingsManager.loadSettings();
+    setSettings(loadedSettings);
+  }, []);
+
+  // Update setting and mark as changed
+  const updateSetting = <K extends keyof AppSettings, S extends keyof AppSettings[K]>(
+    group: K, 
+    key: S, 
+    value: AppSettings[K][S]
+  ) => {
+    setSettings(prev => ({
+      ...prev,
+      [group]: {
+        ...prev[group],
+        [key]: value
+      }
+    }));
+    setHasChanges(true);
+  };
+
+  // Handle save
+  const handleSave = async () => {
+    setSaveStatus('saving');
+    try {
+      const success = SettingsManager.saveSettings(settings);
+      if (success) {
+        setSaveStatus('success');
+        setHasChanges(false);
+        onSave(); // Call parent callback
+        
+        // Reset status after 2 seconds
+        setTimeout(() => setSaveStatus('idle'), 2000);
+      } else {
+        setSaveStatus('error');
+        setTimeout(() => setSaveStatus('idle'), 3000);
+      }
+    } catch (error) {
+      setSaveStatus('error');
+      setTimeout(() => setSaveStatus('idle'), 3000);
+    }
+  };
+
+  // Handle update button
+  const handleUpdate = async () => {
+    try {
+      await forceUpdate();
+    } catch (error) {
+      console.error('Update failed:', error);
+    }
+  };
 
   if (!isVisible) return null;
 
