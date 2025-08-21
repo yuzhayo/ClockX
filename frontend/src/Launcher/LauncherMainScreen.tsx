@@ -62,7 +62,8 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '',
         ref={containerRef}
         className={`launcher-main-screen ${className}`}
         style={{
-          width: '100%',
+          width: isSettingsVisible ? '75%' : '100%',
+          marginLeft: isSettingsVisible ? '25%' : '0',
           height: '100%',
           minHeight: '100vh',
           backgroundColor: '#1a1a1a',
@@ -70,7 +71,8 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '',
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          transition: 'width 0.3s ease, margin-left 0.3s ease'
         }}
       >
         {/* Clean empty screen - scalable content area */}
