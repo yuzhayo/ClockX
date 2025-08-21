@@ -83,15 +83,15 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
 
   return (
     <>
-      {/* Floating Icon (shown when not expanded) */}
+      {/* Floating Icon (shown when settings visible but not expanded) */}
       <LauncherSettingScreenFloatingIcon
-        isVisible={!isExpanded}
+        isVisible={isVisible && !isExpanded}
         onClick={handleIconClick}
         onClose={handleClose}
       />
 
       {/* Floating Settings Panel (shown when expanded) */}
-      {isExpanded && (
+      {isVisible && isExpanded && (
         <LauncherSettingScreenDragHandler
           position={position}
           onPositionChange={setPosition}
