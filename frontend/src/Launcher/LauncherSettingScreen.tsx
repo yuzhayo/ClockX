@@ -20,15 +20,15 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
   }, []);
 
   // Update setting and mark as changed
-  const updateSetting = <K extends keyof AppSettings, S extends keyof AppSettings[K]>(
+  const updateSetting = <K extends keyof AppSettings>(
     group: K, 
-    key: S, 
-    value: AppSettings[K][S]
+    key: keyof AppSettings[K], 
+    value: any
   ) => {
     setSettings(prev => ({
       ...prev,
       [group]: {
-        ...prev[group],
+        ...(prev[group] as any),
         [key]: value
       }
     }));
