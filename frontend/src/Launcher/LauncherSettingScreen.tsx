@@ -45,8 +45,8 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
-            padding: '8px 16px',
+            justifyContent: 'center',
+            padding: '8px 12px',
             backgroundColor: '#2563eb',
             color: 'white',
             border: 'none',
@@ -63,7 +63,6 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
             e.currentTarget.style.backgroundColor = '#2563eb';
           }}
         >
-          <SaveIcon size={14} />
           Save Settings
         </button>
 
