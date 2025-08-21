@@ -92,9 +92,9 @@ const LauncherSettingScreenButton: React.FC<LauncherSettingScreenButtonProps> = 
            updateStatus.isUpdateAvailable ? '🚀 Update' : 'Update'}
         </button>
 
-        {/* Close Button */}
+        {/* Minimize Button (back to icon) */}
         <button
-          onClick={onClose}
+          onClick={onMinimize || onClose}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -115,8 +115,9 @@ const LauncherSettingScreenButton: React.FC<LauncherSettingScreenButtonProps> = 
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
           }}
+          title={onMinimize ? "Minimize to icon" : "Close"}
         >
-          X
+          {onMinimize ? '−' : 'X'}
         </button>
       </div>
     </div>
