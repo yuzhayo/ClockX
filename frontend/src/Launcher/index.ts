@@ -9,8 +9,6 @@ export * from './types';
 
 // Re-export for easier access
 export type {
-  Coordinates,
-  CSSPosition,
   DrawPoint,
   DrawPath,
   GestureEvent,
@@ -18,3 +16,8 @@ export type {
   DrawableScreenProps,
   MainScreenProps
 } from './types';
+
+export type {
+  Coordinates,
+  CSSPosition
+} from './customMapping';
