@@ -6,6 +6,7 @@ interface LauncherSettingScreenButtonProps {
   saveStatus: 'idle' | 'saving' | 'success' | 'error';
   onSave: () => void;
   onClose: () => void;
+  onMinimize?: () => void;
 }
 
 const LauncherSettingScreenButton: React.FC<LauncherSettingScreenButtonProps> = ({
