@@ -100,13 +100,14 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              width: '32px',
-              height: '32px',
+              padding: '8px 12px',
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
               border: 'none',
               borderRadius: '6px',
               cursor: 'pointer',
               color: 'white',
+              fontSize: '14px',
+              fontWeight: '500',
               transition: 'background-color 0.2s'
             }}
             onMouseEnter={(e) => {
@@ -116,7 +117,7 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
               e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
             }}
           >
-            <XIcon size={16} />
+            X
           </button>
         </div>
       </div>
