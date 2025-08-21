@@ -36,10 +36,10 @@ const LauncherSettingScreenContent: React.FC<LauncherSettingScreenContentProps> 
     }}>
       {/* Version Info - Top Left Aligned */}
       <div style={{
-        marginBottom: '20px',
+        marginBottom: '12px',
         textAlign: 'left'
       }}>
-        <div style={{ fontSize: '12px', color: '#888', marginBottom: '2px' }}>
+        <div style={{ fontSize: '10px', color: '#888', marginBottom: '2px' }}>
           App Version: {settings.version}
         </div>
       </div>
