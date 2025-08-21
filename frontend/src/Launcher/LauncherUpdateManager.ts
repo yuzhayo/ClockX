@@ -34,11 +34,11 @@ export class UpdateManager {
   private async init() {
     if ('serviceWorker' in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register('/service-worker.js', {
+        const registration = await navigator.serviceWorker.register('/launcher-service-worker.js', {
           scope: '/'
         });
         
-        console.log('Service Worker registered:', registration);
+        console.log('Launcher Service Worker registered:', registration);
         
         // Handle updates
         registration.addEventListener('updatefound', () => {
