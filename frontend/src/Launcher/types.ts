@@ -1,14 +1,3 @@
-export interface DrawPoint {
-  x: number;
-  y: number;
-}
-
-export interface DrawPath {
-  points: DrawPoint[];
-  color: string;
-  width: number;
-}
-
 export interface GestureEvent {
   type: 'tap' | 'double-tap' | 'triple-tap' | 'drag' | 'pinch';
   position?: import('./customMapping').Coordinates;
