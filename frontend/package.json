@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "REACT_APP_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) react-scripts build",
+    "build:netlify": "REACT_APP_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) REACT_APP_VERSION=1.0.0 react-scripts build",
     "test": "react-scripts test"
   },
   "browserslist": {
