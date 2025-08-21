@@ -98,7 +98,7 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
             opacity: 0.5,
             color: '#888'
           }}>
-            {isSettingsVisible ? 'Settings panel active • Click X to close' : 'Triple-tap to open settings'}
+            {isSettingsVisible ? 'Floating settings active • Main screen unaffected' : 'Triple-tap to open settings'}
           </div>
         </div>
       </div>
