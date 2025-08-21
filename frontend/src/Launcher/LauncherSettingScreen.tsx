@@ -19,11 +19,16 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
   const [zoomLevel, setZoomLevel] = useState(1);
   const [position, setPosition] = useState({ x: 60, y: 60 });
 
-  // Load settings on mount
+  // Load settings on mount and reset expanded state
   useEffect(() => {
     const loadedSettings = SettingsManager.loadSettings();
     setSettings(loadedSettings);
-  }, []);
+    
+    // Reset expanded state when component becomes visible
+    if (isVisible) {
+      setIsExpanded(false);
+    }
+  }, [isVisible]);
 
   // Handle floating icon click
   const handleIconClick = () => {
