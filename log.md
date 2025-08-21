@@ -291,6 +291,52 @@ cd /app/frontend && sudo supervisorctl restart frontend
 
 ---
 **Log Created**: 2025-01-21  
-**Agent Session**: CLEANUP SESSION - Content Removed, Architecture Preserved
-**Status**: ✅ CLEAN SLATE - Empty dropdown placeholders ready for development  
-**Priority**: Add specific functionality to dropdown groups as requested
+**Agent Session**: REFACTORING SESSION - Arrow Removal & Version Update
+**Status**: ✅ CLEAN ARCHITECTURE - Layered dropdown system ready for development  
+**Priority**: Follow AI agent guidance strictly - DO NOT ADD FEATURES UNLESS EXPLICITLY ASKED
+
+## 🤖 CRITICAL AI AGENT GUIDANCE - MUST FOLLOW
+
+### ⚠️ CORE RULES - NEVER VIOLATE:
+1. **NO FEATURES WITHOUT REQUEST**: Never add any features, settings, or functionality unless explicitly asked by the user
+2. **PLACEHOLDER ONLY**: All dropdown content must remain as empty placeholders unless specifically requested to add content
+3. **VERSION MANAGEMENT**: Update version number (increment by 0.0.1) every time changes are made to the codebase
+4. **MINIMAL CHANGES**: Only make the exact changes requested - no "improvements" or "enhancements" on your own
+
+### 📝 VERSION CONTROL PROTOCOL:
+- Current Version: 1.0.1
+- Location: `/app/frontend/src/Launcher/LauncherSettingsManager.ts` (lines 50 and 91)
+- **MUST UPDATE**: Increment version with every code change
+- Version Display: Only show "App Version: X.X.X" (removed schema and timestamp)
+
+### 🚫 WHAT NOT TO DO:
+- ❌ Add functional settings controls (toggles, inputs, sliders)  
+- ❌ Add content to placeholder sections
+- ❌ Add new components without being asked
+- ❌ Add styling improvements unless requested
+- ❌ Add animations or transitions beyond existing ones
+- ❌ Add validation, error handling, or extra features
+- ❌ Suggest improvements or additional features
+
+### ✅ WHAT TO DO:
+- ✅ Only implement exactly what user requests
+- ✅ Keep all placeholders as simple italic text
+- ✅ Maintain existing architecture and file structure  
+- ✅ Update version number with each change
+- ✅ Ask for clarification if request is unclear
+- ✅ Test functionality after changes if requested
+
+### 🏗️ CURRENT ARCHITECTURE (DO NOT MODIFY WITHOUT REQUEST):
+```
+LauncherSettingScreenContent.tsx     # Manager (version display + orchestration)
+├── LauncherSettingContentLayer1.tsx # Settings dropdown (NO ARROWS) + 4 children  
+└── [Future layers]                  # Ready for expansion when requested
+```
+
+### 📋 TESTING PROTOCOL:
+- Only run tests when user explicitly asks
+- User will often test manually 
+- Always ask before running automated tests
+- Follow existing test protocols in this file
+
+---
