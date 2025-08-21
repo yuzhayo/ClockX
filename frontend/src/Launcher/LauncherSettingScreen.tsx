@@ -164,6 +164,7 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
                 saveStatus={saveStatus}
                 onSave={handleSave}
                 onClose={handleClose}
+                onMinimize={handleMinimize}
               />
 
               {/* Settings Content */}
