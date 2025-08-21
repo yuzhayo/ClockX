@@ -145,16 +145,49 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
             padding: '16px',
             backgroundColor: 'rgba(255, 255, 255, 0.05)',
             borderRadius: '8px',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            textAlign: 'center'
+            border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
-            <span style={{ 
-              color: '#888', 
+            <label style={{ 
+              color: '#d1d5db', 
               fontSize: '14px',
-              fontStyle: 'italic'
+              display: 'block',
+              marginBottom: '12px'
             }}>
-              Group 1 Content
-            </span>
+              Volume Control
+            </label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              defaultValue="50"
+              style={{
+                width: '100%',
+                height: '6px',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                borderRadius: '3px',
+                outline: 'none',
+                appearance: 'none',
+                WebkitAppearance: 'none'
+              }}
+              onInput={(e) => {
+                // Custom slider styling
+                const target = e.target as HTMLInputElement;
+                const value = parseInt(target.value);
+                const percentage = (value / 100) * 100;
+                target.style.background = `linear-gradient(to right, #2563eb 0%, #2563eb ${percentage}%, rgba(255, 255, 255, 0.2) ${percentage}%, rgba(255, 255, 255, 0.2) 100%)`;
+              }}
+            />
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              marginTop: '8px',
+              fontSize: '12px',
+              color: '#888'
+            }}>
+              <span>0</span>
+              <span>50</span>
+              <span>100</span>
+            </div>
           </div>
         </div>
 
