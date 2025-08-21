@@ -24,9 +24,20 @@ export { default as LauncherMainScreen } from './LauncherMainScreen';
 export { default as LauncherSettingScreen } from './LauncherSettingScreen';
 export { CustomMapping } from './LauncherCustomMapping';
 export { GestureDetection, useGestureDetection } from './LauncherGestureDetection';
+export { SettingsManager, DEFAULT_SETTINGS } from './LauncherSettingsManager';
+export { UpdateManager, useUpdateManager } from './LauncherUpdateManager';
 
 // ===== TYPE RE-EXPORTS =====
 export type {
   Coordinates,
   CSSPosition
 } from './LauncherCustomMapping';
+
+export type {
+  AppSettings,
+  AppVersion
+} from './LauncherSettingsManager';
+
+export type {
+  UpdateStatus
+} from './LauncherUpdateManager';
