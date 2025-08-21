@@ -81,7 +81,7 @@ export class GestureDetection {
 }
 
 export const useGestureDetection = (
-  elementRef: React.RefObject<HTMLElement>,
+  elementRef: React.RefObject<HTMLElement | null>,
   onGesture: (event: GestureEvent) => void
 ) => {
   const gestureDetectionRef = useRef<GestureDetection | null>(null);
