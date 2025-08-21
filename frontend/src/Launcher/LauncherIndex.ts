@@ -13,7 +13,7 @@ export interface ScreenDimensions {
   height: number;
 }
 
-export interface DrawableScreenProps {
+export interface SettingScreenProps {
   isVisible: boolean;
   onClose: () => void;
   onSave: () => void;
