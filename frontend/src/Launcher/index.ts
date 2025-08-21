@@ -9,8 +9,6 @@ export * from './types';
 
 // Re-export for easier access
 export type {
-  DrawPoint,
-  DrawPath,
   GestureEvent,
   ScreenDimensions,
   DrawableScreenProps,
