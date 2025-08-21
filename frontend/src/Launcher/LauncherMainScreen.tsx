@@ -10,7 +10,7 @@ interface ScreenDimensions {
   height: number;
 }
 
-const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '', isSettingsVisible = false }) => {
+const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' }) => {
   const [screenDimensions, setScreenDimensions] = useState<ScreenDimensions>({
     width: window.innerWidth,
     height: window.innerHeight
