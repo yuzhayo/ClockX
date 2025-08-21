@@ -47,7 +47,7 @@ export interface AppSettings {
 
 // Default settings configuration
 export const DEFAULT_SETTINGS: AppSettings = {
-  version: process.env.REACT_APP_VERSION || '1.0.0',
+  version: process.env.REACT_APP_VERSION || '1.0.1',
   buildTime: process.env.REACT_APP_BUILD_TIME || new Date().toISOString(),
   settingsSchema: '1.0',
   
