@@ -1,5 +1,3 @@
-import { Coordinates } from './customMapping';
-
 export interface DrawPoint {
   x: number;
   y: number;
@@ -13,7 +11,7 @@ export interface DrawPath {
 
 export interface GestureEvent {
   type: 'tap' | 'double-tap' | 'triple-tap' | 'drag' | 'pinch';
-  position?: Coordinates;
+  position?: import('./customMapping').Coordinates;
   timestamp: number;
 }
 
