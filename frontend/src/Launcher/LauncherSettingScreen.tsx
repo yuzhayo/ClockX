@@ -15,6 +15,9 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
   const [hasChanges, setHasChanges] = useState(false);
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'success' | 'error'>('idle');
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [position, setPosition] = useState({ x: 60, y: 60 });
 
   // Load settings on mount
   useEffect(() => {
