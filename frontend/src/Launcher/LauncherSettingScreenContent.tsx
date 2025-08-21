@@ -31,7 +31,7 @@ const LauncherSettingScreenContent: React.FC<LauncherSettingScreenContentProps> 
   return (
     <div className="launcher-settings-content" style={{ 
       flex: 1, 
-      padding: '20px',
+      padding: '12px',
       overflowY: 'auto'
     }}>
       {/* Version Info - Top Left Aligned */}
