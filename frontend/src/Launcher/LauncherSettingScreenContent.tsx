@@ -96,88 +96,90 @@ const LauncherSettingScreenContent: React.FC<LauncherSettingScreenContentProps> 
       padding: '20px',
       overflowY: 'auto'
     }}>
-      {/* Display Settings Group */}
-      <DropdownGroup title="Display Settings" groupKey="display">
-        <div style={{
-          padding: '16px',
-          textAlign: 'center'
-        }}>
-          <span style={{ 
-            color: '#888', 
-            fontSize: '14px',
-            fontStyle: 'italic'
-          }}>
-            Display Settings Content
-          </span>
-        </div>
-      </DropdownGroup>
-
-      {/* Gesture Settings Group */}
-      <DropdownGroup title="Gesture Settings" groupKey="gestures">
-        <div style={{
-          padding: '16px',
-          textAlign: 'center'
-        }}>
-          <span style={{ 
-            color: '#888', 
-            fontSize: '14px',
-            fontStyle: 'italic'
-          }}>
-            Gesture Settings Content
-          </span>
-        </div>
-      </DropdownGroup>
-
-      {/* Performance Settings Group */}
-      <DropdownGroup title="Performance" groupKey="performance">
-        <div style={{
-          padding: '16px',
-          textAlign: 'center'
-        }}>
-          <span style={{ 
-            color: '#888', 
-            fontSize: '14px',
-            fontStyle: 'italic'
-          }}>
-            Performance Content
-          </span>
-        </div>
-      </DropdownGroup>
-
-      {/* Advanced Settings Group */}
-      <DropdownGroup title="Advanced" groupKey="advanced">
-        <div style={{
-          padding: '16px',
-          textAlign: 'center'
-        }}>
-          <span style={{ 
-            color: '#888', 
-            fontSize: '14px',
-            fontStyle: 'italic'
-          }}>
-            Advanced Content
-          </span>
-        </div>
-      </DropdownGroup>
-
-      {/* Status Info - Keep App Version */}
+      {/* Version Info - Top Left Aligned */}
       <div style={{
-        marginTop: '24px',
-        padding: '12px',
-        backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        borderRadius: '6px',
-        border: '1px solid rgba(255, 255, 255, 0.1)'
+        marginBottom: '20px',
+        textAlign: 'left'
       }}>
-        <div style={{ fontSize: '12px', color: '#888', marginBottom: '4px' }}>
+        <div style={{ fontSize: '12px', color: '#888', marginBottom: '2px' }}>
           App Version: {settings.version}
         </div>
-        <div style={{ fontSize: '12px', color: '#888', marginBottom: '4px' }}>
+        <div style={{ fontSize: '12px', color: '#888', marginBottom: '2px' }}>
           Settings Schema: {settings.settingsSchema}
         </div>
         <div style={{ fontSize: '12px', color: '#888' }}>
           Last Modified: {new Date().toLocaleString()}
         </div>
       </div>
+
+      {/* Main Settings Parent Dropdown */}
+      <DropdownGroup title="Settings" groupKey="mainSettings">
+        
+        {/* Display Settings Group */}
+        <DropdownGroup title="Display Settings" groupKey="display">
+          <div style={{
+            padding: '16px',
+            textAlign: 'center'
+          }}>
+            <span style={{ 
+              color: '#888', 
+              fontSize: '14px',
+              fontStyle: 'italic'
+            }}>
+              Display Settings Content
+            </span>
+          </div>
+        </DropdownGroup>
+
+        {/* Gesture Settings Group */}
+        <DropdownGroup title="Gesture Settings" groupKey="gestures">
+          <div style={{
+            padding: '16px',
+            textAlign: 'center'
+          }}>
+            <span style={{ 
+              color: '#888', 
+              fontSize: '14px',
+              fontStyle: 'italic'
+            }}>
+              Gesture Settings Content
+            </span>
+          </div>
+        </DropdownGroup>
+
+        {/* Performance Settings Group */}
+        <DropdownGroup title="Performance" groupKey="performance">
+          <div style={{
+            padding: '16px',
+            textAlign: 'center'
+          }}>
+            <span style={{ 
+              color: '#888', 
+              fontSize: '14px',
+              fontStyle: 'italic'
+            }}>
+              Performance Content
+            </span>
+          </div>
+        </DropdownGroup>
+
+        {/* Advanced Settings Group */}
+        <DropdownGroup title="Advanced" groupKey="advanced">
+          <div style={{
+            padding: '16px',
+            textAlign: 'center'
+          }}>
+            <span style={{ 
+              color: '#888', 
+              fontSize: '14px',
+              fontStyle: 'italic'
+            }}>
+              Advanced Content
+            </span>
+          </div>
+        </DropdownGroup>
+
+      </DropdownGroup>
     </div>
   );
 };
