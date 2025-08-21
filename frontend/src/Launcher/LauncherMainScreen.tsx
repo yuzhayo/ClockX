@@ -85,7 +85,7 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
             fontFamily: 'monospace'
           }}
         >
-          Clean Launcher Screen
+          {isSettingsVisible ? 'Launcher with Settings' : 'Clean Launcher Screen'}
           <div style={{ 
             fontSize: '14px', 
             marginTop: '8px', 
@@ -99,7 +99,7 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
             opacity: 0.5,
             color: '#888'
           }}>
-            Triple-tap to open settings
+            {isSettingsVisible ? 'Settings panel active • Click X to close' : 'Triple-tap to open settings'}
           </div>
         </div>
       </div>
