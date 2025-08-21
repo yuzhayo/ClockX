@@ -100,56 +100,54 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
       >
         {/* Save Settings Button */}
         <button
-          onClick={onSave}
+          onClick={handleSave}
+          disabled={!hasChanges || saveStatus === 'saving'}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             padding: '8px 12px',
-            backgroundColor: '#2563eb',
+            backgroundColor: hasChanges ? '#2563eb' : 'rgba(37, 99, 235, 0.5)',
             color: 'white',
             border: 'none',
             borderRadius: '6px',
-            cursor: 'pointer',
+            cursor: hasChanges ? 'pointer' : 'not-allowed',
             fontSize: '14px',
             fontWeight: '500',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#1d4ed8';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#2563eb';
+            transition: 'background-color 0.2s',
+            opacity: saveStatus === 'saving' ? 0.7 : 1
           }}
         >
-          Save Settings
+          {saveStatus === 'saving' ? 'Saving...' : 
+           saveStatus === 'success' ? '✓ Saved' :
+           saveStatus === 'error' ? '✗ Error' : 'Save Settings'}
         </button>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           {/* Update Button */}
           <button
+            onClick={handleUpdate}
+            disabled={updateStatus.isUpdating}
             style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               padding: '8px 12px',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backgroundColor: updateStatus.isUpdateAvailable ? '#16a34a' : 
+                             updateStatus.isUpdating ? '#ea580c' : 'rgba(255, 255, 255, 0.1)',
               border: 'none',
               borderRadius: '6px',
-              cursor: 'pointer',
+              cursor: updateStatus.isUpdating ? 'not-allowed' : 'pointer',
               color: 'white',
               fontSize: '14px',
               fontWeight: '500',
               transition: 'background-color 0.2s'
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-            }}
+            title={updateStatus.isUpdateAvailable ? 'Update available!' : 
+                   updateStatus.isUpdating ? 'Updating...' : 'Check for updates'}
           >
-            Update
+            {updateStatus.isUpdating ? 'Updating...' : 
+             updateStatus.isUpdateAvailable ? '🚀 Update' : 'Update'}
           </button>
 
           {/* Close Button */}
