@@ -34,19 +34,20 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
 
   // Handle floating icon click
   const handleIconClick = () => {
-    console.log('Icon clicked - expanding panel');
+    console.log('🔵 handleIconClick called - Current state:', { isVisible, isExpanded });
+    console.log('🔵 Setting isExpanded to TRUE');
     setIsExpanded(true);
   };
 
   // Handle panel minimize (back to icon)
   const handleMinimize = () => {
-    console.log('Panel minimized - back to icon');
+    console.log('➖ handleMinimize called - Setting isExpanded to FALSE');
     setIsExpanded(false);
   };
 
   // Handle complete close (hide entire system)
   const handleClose = () => {
-    console.log('Settings closed completely');
+    console.log('❌ handleClose called - Closing entire settings system');
     setIsExpanded(false);
     onClose();
   };
