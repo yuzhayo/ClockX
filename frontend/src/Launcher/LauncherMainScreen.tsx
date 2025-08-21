@@ -61,17 +61,19 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
         ref={containerRef}
         className={`launcher-main-screen ${className}`}
         style={{
+          position: 'absolute',
+          top: 0,
+          left: isSettingsVisible ? '25%' : '0',
           width: isSettingsVisible ? '75%' : '100%',
-          marginLeft: isSettingsVisible ? '25%' : '0',
-          height: '100%',
+          height: '100vh',
           minHeight: '100vh',
           backgroundColor: '#1a1a1a',
-          position: 'relative',
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          transition: 'width 0.3s ease, margin-left 0.3s ease'
+          transition: 'left 0.3s ease, width 0.3s ease',
+          zIndex: 1
         }}
       >
         {/* Clean empty screen - scalable content area */}
