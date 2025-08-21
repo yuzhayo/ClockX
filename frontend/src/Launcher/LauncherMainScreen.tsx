@@ -84,7 +84,7 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
             fontFamily: 'monospace'
           }}
         >
-          {isSettingsVisible ? 'Launcher with Settings' : 'Clean Launcher Screen'}
+          {isSettingsVisible ? 'Full Width Launcher Screen' : 'Clean Launcher Screen'}
           <div style={{ 
             fontSize: '14px', 
             marginTop: '8px', 
