@@ -2,7 +2,6 @@ import React from 'react';
 
 interface LauncherSettingScreenFloatingIconProps {
   onClick: () => void;
-  onClose: () => void;
   isVisible: boolean;
 }
 
