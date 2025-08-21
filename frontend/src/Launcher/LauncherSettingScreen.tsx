@@ -3,9 +3,11 @@ import { SettingScreenProps } from './LauncherIndex';
 import { SettingsManager, AppSettings, DEFAULT_SETTINGS } from './LauncherSettingsManager';
 import LauncherSettingScreenButton from './LauncherSettingScreenButton';
 import LauncherSettingScreenContent from './LauncherSettingScreenContent';
-import LauncherSettingScreenFloatingIcon from './LauncherSettingScreenFloatingIcon';
-import LauncherSettingScreenDragHandler from './LauncherSettingScreenDragHandler';
-import LauncherSettingScreenPinchZoom from './LauncherSettingScreenPinchZoom';
+import {
+  LauncherSettingScreenFloatingIcon,
+  LauncherSettingScreenDragHandler,
+  LauncherSettingScreenPinchZoom
+} from './LauncherSettingScreenFloatingLogic';
 
 const SettingScreen: React.FC<SettingScreenProps> = ({ 
   isVisible, 
