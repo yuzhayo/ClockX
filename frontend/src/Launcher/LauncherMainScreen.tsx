@@ -15,6 +15,32 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
     width: window.innerWidth,
     height: window.innerHeight
   });
+  
+  const [isSettingsVisible, setIsSettingsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Handle gestures
+  const handleGesture = (event: GestureEvent) => {
+    console.log('Gesture detected:', event.type);
+    
+    if (event.type === 'triple-tap') {
+      setIsSettingsVisible(true);
+    }
+  };
+
+  // Initialize gesture detection
+  useGestureDetection(containerRef, handleGesture);
+
+  // Handle settings actions
+  const handleCloseSettings = () => {
+    setIsSettingsVisible(false);
+  };
+
+  const handleSaveSettings = () => {
+    console.log('Settings saved!');
+    // Add save logic here if needed
+    setIsSettingsVisible(false);
+  };
 
   // Handle window resize for responsive behavior
   useEffect(() => {
