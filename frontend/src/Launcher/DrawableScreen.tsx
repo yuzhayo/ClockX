@@ -1,5 +1,5 @@
 import React from 'react';
-import { SaveIcon, XIcon } from '../../assets/icons';
+import { SaveIcon, XIcon } from '../assets/icons';
 import { DrawableScreenProps } from './types';
 
 const DrawableScreen: React.FC<DrawableScreenProps> = ({ 
