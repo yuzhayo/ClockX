@@ -156,15 +156,26 @@ const DropdownGroup = ({ title, groupKey, children }) => {
 └── backend/                         # FastAPI backend (unused)
 ```
 
-## Latest Changes by Current Agent (Session ID: 2025-01-21-v5-PARENT-DROPDOWN)
+## Latest Changes by Current Agent (Session ID: 2025-01-21-v6-REFACTORING)
 
-### 🎯 Parent Dropdown Implementation Achievements
+### 🎯 Code Refactoring & Architecture Achievements
 
-1. **New Parent Dropdown Structure**:
-   ✅ **Main Settings Parent**: Created new "Settings" parent dropdown containing all 4 groups
-   ✅ **Nested Architecture**: All existing dropdowns now live inside the main Settings parent
-   ✅ **Version Text Repositioned**: Moved version information to top-left alignment
-   ✅ **Empty Placeholders Maintained**: All content remains as placeholders as requested
+1. **Removed Arrow from Main Settings**:
+   ✅ **No Arrow on Settings**: Main "SETTINGS" dropdown button has no visual arrow
+   ✅ **Sub-dropdowns Keep Arrows**: Child dropdowns (Display, Gesture, Performance, Advanced) retain ▼ arrows
+   ✅ **Clean Visual Design**: Main settings appears as a clean header without expansion indicator
+
+2. **Code Architecture Refactoring**:
+   ✅ **New Layer1 Component**: Created `LauncherSettingContentLayer1.tsx` for Settings dropdown and children
+   ✅ **Manager Pattern**: `LauncherSettingScreenContent.tsx` now acts as manager for dropdown layers
+   ✅ **Separation of Concerns**: Dropdown logic separated into dedicated layer components
+   ✅ **Scalable Structure**: Ready for additional dropdown layers (Layer2, Layer3, etc.)
+
+3. **Component Structure**:
+   ✅ **LauncherSettingScreenContent.tsx**: Manager component with version display and layer orchestration
+   ✅ **LauncherSettingContentLayer1.tsx**: Contains Settings parent + 4 child dropdowns
+   ✅ **State Management**: Manager handles all expanded states and passes to layers
+   ✅ **Props Interface**: Clean props passing for settings, state, and handlers
 
 2. **New Dropdown Hierarchy**:
    ✅ **Main "Settings" Dropdown**: Expanded by default, contains all 4 sub-groups
