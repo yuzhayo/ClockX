@@ -22,6 +22,8 @@ export interface SettingScreenProps {
 // ===== COMPONENT EXPORTS =====
 export { default as LauncherMainScreen } from './LauncherMainScreen';
 export { default as LauncherSettingScreen } from './LauncherSettingScreen';
+export { default as LauncherSettingScreenButton } from './LauncherSettingScreenButton';
+export { default as LauncherSettingScreenContent } from './LauncherSettingScreenContent';
 export { CustomMapping } from './LauncherCustomMapping';
 export { GestureDetection, useGestureDetection } from './LauncherGestureDetection';
 export { SettingsManager, DEFAULT_SETTINGS } from './LauncherSettingsManager';
