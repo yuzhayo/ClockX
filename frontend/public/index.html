@@ -34,19 +34,20 @@
         
         <!-- Service Worker Registration -->
         <script>
+            // Bridge: Register Launcher Service Worker
             if ('serviceWorker' in navigator && 'PushManager' in window) {
                 window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js')
+                    navigator.serviceWorker.register('/launcher-service-worker.js')
                         .then((registration) => {
-                            console.log('SW registered: ', registration);
+                            console.log('Launcher SW registered via bridge: ', registration);
                         })
                         .catch((registrationError) => {
-                            console.log('SW registration failed: ', registrationError);
+                            console.log('Launcher SW registration failed: ', registrationError);
                         });
                 });
             }
             
-            // PWA Install Prompt
+            // PWA Install Prompt (Bridge to Launcher)
             let deferredPrompt;
             window.addEventListener('beforeinstallprompt', (e) => {
                 deferredPrompt = e;
