@@ -1,8 +1,8 @@
 import React from 'react';
 import { SaveIcon, XIcon } from '../assets/icons';
-import { DrawableScreenProps } from './LauncherIndex';
+import { SettingScreenProps } from './LauncherIndex';
 
-const SettingScreen: React.FC<DrawableScreenProps> = ({ 
+const SettingScreen: React.FC<SettingScreenProps> = ({ 
   isVisible, 
   onClose, 
   onSave 
