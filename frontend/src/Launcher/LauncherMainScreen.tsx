@@ -21,10 +21,18 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
 
   // Handle gestures
   const handleGesture = (event: GestureEvent) => {
-    console.log('Gesture detected:', event.type);
+    console.log('Gesture detected:', event.type, 'Settings visible:', isSettingsVisible);
     
     if (event.type === 'triple-tap') {
-      setIsSettingsVisible(true);
+      if (isSettingsVisible) {
+        // Close settings if they're currently visible
+        console.log('Closing settings via triple-tap');
+        setIsSettingsVisible(false);
+      } else {
+        // Open settings if they're not visible
+        console.log('Opening settings via triple-tap');
+        setIsSettingsVisible(true);
+      }
     }
   };
 
