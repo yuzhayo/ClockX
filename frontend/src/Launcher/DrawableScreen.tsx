@@ -65,31 +65,8 @@ const DrawableScreen: React.FC<DrawableScreenProps> = ({
           Save
         </button>
 
-        {/* Drawing Tools */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <button
-            onClick={clearCanvas}
-            style={{
-              padding: '8px 12px',
-              backgroundColor: '#dc2626',
-              color: 'white',
-              border: 'none',
-              borderRadius: '6px',
-              cursor: 'pointer',
-              fontSize: '12px'
-            }}
-          >
-            Clear
-          </button>
-          
-          <div style={{ 
-            color: '#888', 
-            fontSize: '12px',
-            fontFamily: 'monospace'
-          }}>
-            Drawing Mode Active
-          </div>
-        </div>
+        {/* Empty space for center */}
+        <div></div>
 
         {/* Close Button - Top Right */}
         <button
@@ -118,34 +95,21 @@ const DrawableScreen: React.FC<DrawableScreenProps> = ({
         </button>
       </div>
 
-      {/* Drawing Canvas */}
-      <div style={{ flex: 1, position: 'relative' }}>
-        <canvas
-          ref={canvasRef}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          style={{
-            width: '100%',
-            height: '100%',
-            cursor: 'crosshair',
-            touchAction: 'none' // Prevents scrolling on touch devices
-          }}
-        />
-      </div>
-
-      {/* Bottom Info */}
-      <div
-        style={{
-          padding: '12px 20px',
-          backgroundColor: 'rgba(26, 26, 26, 0.9)',
-          color: '#666',
-          fontSize: '12px',
+      {/* Empty Content Area */}
+      <div style={{ 
+        flex: 1, 
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <div style={{
+          color: '#888',
+          fontSize: '18px',
           textAlign: 'center',
           fontFamily: 'monospace'
-        }}
-      >
-        Use pointer/touch to draw • Triple tap outside to close • Changes are not automatically saved
+        }}>
+          Empty Screen
+        </div>
       </div>
     </div>
   );
