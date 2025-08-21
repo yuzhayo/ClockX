@@ -90,7 +90,12 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
     }
   };
 
-  if (!isVisible) return null;
+  if (!isVisible) {
+    console.log('⚫ SettingScreen not visible - isVisible:', isVisible);
+    return null;
+  }
+
+  console.log('🟢 SettingScreen rendering - State:', { isVisible, isExpanded, hasChanges, saveStatus });
 
   return (
     <>
