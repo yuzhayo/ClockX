@@ -188,31 +188,39 @@ const DropdownGroup = ({ title, groupKey, children }) => {
 - **Animations**: Smooth dropdown expand/collapse animations preserved
 - **Content**: All sub-dropdowns contain empty placeholders only
 
-### 🔧 Technical Implementation Details (POST-CLEANUP)
+### 🔧 Technical Implementation Details (POST-PARENT-DROPDOWN)
 
-**Cleaned Dropdown Content**:
+**New Parent-Child Dropdown Structure**:
 ```javascript
-// Simple placeholder content
-<div style={{ padding: '16px', textAlign: 'center' }}>
-  <span style={{ color: '#888', fontSize: '14px', fontStyle: 'italic' }}>
-    Display Settings Content
-  </span>
+// Main Settings parent dropdown (expanded by default)
+mainSettings: true,
+// 4 sub-dropdowns nested inside (collapsed by default)
+display: false,
+gestures: false,
+performance: false,
+advanced: false
+```
+
+**Version Text Repositioning**:
+```javascript
+// Version info now at top-left of settings content
+<div style={{ marginBottom: '20px', textAlign: 'left' }}>
+  <div>App Version: {settings.version}</div>
+  <div>Settings Schema: {settings.settingsSchema}</div>
+  <div>Last Modified: {new Date().toLocaleString()}</div>
 </div>
 ```
 
-**Preserved App Version Info**:
+**Nested Dropdown Architecture**:
 ```javascript
-// Keep version information
-<div>App Version: {settings.version}</div>
-<div>Settings Schema: {settings.settingsSchema}</div>
-<div>Last Modified: {new Date().toLocaleString()}</div>
+// Parent Settings dropdown contains all 4 sub-groups
+<DropdownGroup title="Settings" groupKey="mainSettings">
+  <DropdownGroup title="Display Settings" groupKey="display">
+  <DropdownGroup title="Gesture Settings" groupKey="gestures">
+  <DropdownGroup title="Performance" groupKey="performance">
+  <DropdownGroup title="Advanced" groupKey="advanced">
+</DropdownGroup>
 ```
-
-**Maintained Architecture**:
-- Isolated Launcher folder unchanged
-- Bridge files unchanged  
-- Component separation intact
-- Service worker system operational
 
 ## Ready for Development
 
