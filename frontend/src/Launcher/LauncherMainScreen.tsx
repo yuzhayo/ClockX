@@ -114,3 +114,6 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '',
 };
 
 export default LauncherMainScreen;
+};
+
+export default LauncherMainScreen;
