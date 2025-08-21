@@ -16,14 +16,14 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
         position: 'fixed',
         top: 0,
         left: 0,
-        width: '25%', // Changed to 25% width from left boundary
+        width: '25%',
         height: '100vh',
         backgroundColor: 'rgba(26, 26, 26, 0.95)',
         backdropFilter: 'blur(10px)',
-        zIndex: 1000,
+        zIndex: 999, // Lower z-index to avoid overlapping
         display: 'flex',
         flexDirection: 'column',
-        borderRight: '1px solid rgba(255, 255, 255, 0.1)'
+        borderRight: '2px solid rgba(255, 255, 255, 0.2)' // More visible border
       }}
     >
       {/* Top Controls */}
