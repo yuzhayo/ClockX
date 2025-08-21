@@ -1,4 +1,4 @@
-import { Coordinates } from '../utils/customMapping';
+import { Coordinates } from './customMapping';
 
 export interface DrawPoint {
   x: number;

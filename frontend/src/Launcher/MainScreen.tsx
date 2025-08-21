@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { CustomMapping } from '../utils/customMapping';
-import { useGestureDetection } from '../utils/gestureDetection';
+import { CustomMapping } from './customMapping';
+import { useGestureDetection } from './gestureDetection';
 import { GestureEvent, MainScreenProps, ScreenDimensions } from './types';
 import DrawableScreen from './DrawableScreen';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainScreen from './components/MainScreen';
+import MainScreen from './Launcher/MainScreen';
 import './index.css';
 
 const App: React.FC = () => {
