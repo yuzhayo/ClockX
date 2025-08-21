@@ -28,9 +28,15 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
     
     // Reset expanded state when component becomes visible
     if (isVisible) {
+      console.log('🔄 Settings becoming visible - resetting isExpanded to FALSE');
       setIsExpanded(false);
     }
   }, [isVisible]);
+
+  // Debug state changes
+  useEffect(() => {
+    console.log('📊 State changed:', { isVisible, isExpanded, hasChanges });
+  }, [isVisible, isExpanded, hasChanges]);
 
   // Handle floating icon click
   const handleIconClick = () => {
