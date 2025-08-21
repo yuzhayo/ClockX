@@ -11,7 +11,8 @@ const LauncherSettingScreenContent: React.FC<LauncherSettingScreenContentProps> 
   updateSetting
 }) => {
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
-    display: true,
+    mainSettings: true, // Parent dropdown for all settings
+    display: false,
     gestures: false,
     performance: false,
     advanced: false
