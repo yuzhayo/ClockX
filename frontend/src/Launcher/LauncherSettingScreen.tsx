@@ -1,5 +1,4 @@
 import React from 'react';
-import { SaveIcon, XIcon } from '../assets/icons';
 import { SettingScreenProps } from './LauncherIndex';
 
 const SettingScreen: React.FC<SettingScreenProps> = ({ 
