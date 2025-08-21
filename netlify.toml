@@ -7,7 +7,7 @@
   publish = "frontend/build"
   
   # Node.js version
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "20" }
 
 [build.processing]
   # Enable gzip compression
