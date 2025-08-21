@@ -63,8 +63,8 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
         style={{
           position: 'absolute',
           top: 0,
-          left: isSettingsVisible ? '25%' : '0',
-          width: isSettingsVisible ? '75%' : '100%',
+          left: 0,
+          width: '100%',
           height: '100vh',
           minHeight: '100vh',
           backgroundColor: '#1a1a1a',
@@ -72,7 +72,6 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          transition: 'left 0.3s ease, width 0.3s ease',
           zIndex: 1
         }}
       >
