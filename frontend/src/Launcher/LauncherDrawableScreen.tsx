@@ -1,6 +1,6 @@
 import React from 'react';
 import { SaveIcon, XIcon } from '../assets/icons';
-import { DrawableScreenProps } from './types';
+import { DrawableScreenProps } from './LauncherIndex';
 
 const DrawableScreen: React.FC<DrawableScreenProps> = ({ 
   isVisible, 
