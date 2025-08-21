@@ -37,7 +37,7 @@ const LauncherSettingScreenDragHandler: React.FC<LauncherSettingScreenDragHandle
     if (!element) return false;
     
     // Check if element or its parent has the drag handle class
-    let currentElement = element;
+    let currentElement: Element | null = element;
     while (currentElement && currentElement !== containerRef.current) {
       if (currentElement.matches && currentElement.matches(dragHandle)) {
         return true;
