@@ -3,7 +3,6 @@ import { useGestureDetection, GestureEvent, LauncherSettingScreen } from './Laun
 
 interface LauncherMainScreenProps {
   className?: string;
-  isSettingsVisible?: boolean;
 }
 
 interface ScreenDimensions {
