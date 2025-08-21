@@ -43,9 +43,9 @@ const MainScreen: React.FC<MainScreenProps> = ({ className = '' }) => {
   const isPortrait = screenDimensions.height > screenDimensions.width;
   
   // Calculate main container dimensions for 1:1 aspect ratio
-  const containerSize = isPortrait 
-    ? `${screenDimensions.width}px` 
-    : `${screenDimensions.height}px`;
+  // Use 90% of the smaller dimension to leave some padding
+  const availableSize = Math.min(screenDimensions.width, screenDimensions.height) * 0.9;
+  const containerSize = `${availableSize}px`;
 
   const handleSave = () => {
     console.log('Save button clicked - ready for future implementation');
