@@ -56,39 +56,57 @@ const LauncherMainScreen: React.FC<LauncherMainScreenProps> = ({ className = '' 
   }, []);
 
   return (
-    <div 
-      className={`launcher-main-screen ${className}`}
-      style={{
-        width: '100%',
-        height: '100%',
-        minHeight: '100vh',
-        backgroundColor: '#1a1a1a',
-        position: 'relative',
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      {/* Clean empty screen - scalable content area */}
-      <div
+    <>
+      <div 
+        ref={containerRef}
+        className={`launcher-main-screen ${className}`}
         style={{
-          color: '#666',
-          fontSize: '18px',
-          textAlign: 'center',
-          fontFamily: 'monospace'
+          width: '100%',
+          height: '100%',
+          minHeight: '100vh',
+          backgroundColor: '#1a1a1a',
+          position: 'relative',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
       >
-        Clean Launcher Screen
-        <div style={{ 
-          fontSize: '14px', 
-          marginTop: '8px', 
-          opacity: 0.7 
-        }}>
-          {screenDimensions.width}x{screenDimensions.height}
+        {/* Clean empty screen - scalable content area */}
+        <div
+          style={{
+            color: '#666',
+            fontSize: '18px',
+            textAlign: 'center',
+            fontFamily: 'monospace'
+          }}
+        >
+          Clean Launcher Screen
+          <div style={{ 
+            fontSize: '14px', 
+            marginTop: '8px', 
+            opacity: 0.7 
+          }}>
+            {screenDimensions.width}x{screenDimensions.height}
+          </div>
+          <div style={{ 
+            fontSize: '12px', 
+            marginTop: '16px', 
+            opacity: 0.5,
+            color: '#888'
+          }}>
+            Triple-tap to open settings
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Settings Screen Overlay */}
+      <LauncherSettingScreen
+        isVisible={isSettingsVisible}
+        onClose={handleCloseSettings}
+        onSave={handleSaveSettings}
+      />
+    </>
   );
 };
 
