@@ -22,9 +22,6 @@ const LauncherSettingContentLayer1: React.FC<LauncherSettingContentLayer1Props> 
     const isExpanded = expandedGroups[groupKey];
     const isMainSettings = groupKey === 'mainSettings';
     
-    // Debug logging
-    console.log(`DropdownGroup: ${title}, groupKey: ${groupKey}, isMainSettings: ${isMainSettings}, isExpanded: ${isExpanded}`);
-    
     return (
       <div style={{ marginBottom: '16px' }}>
         {/* Dropdown Header */}
