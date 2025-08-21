@@ -61,7 +61,7 @@ const DrawableScreen: React.FC<DrawableScreenProps> = ({
             e.currentTarget.style.backgroundColor = '#2563eb';
           }}
         >
-          <Save size={16} />
+          <SaveIcon size={16} />
           Save
         </button>
 
