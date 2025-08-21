@@ -42,12 +42,6 @@ const LauncherSettingScreenContent: React.FC<LauncherSettingScreenContentProps> 
         <div style={{ fontSize: '12px', color: '#888', marginBottom: '2px' }}>
           App Version: {settings.version}
         </div>
-        <div style={{ fontSize: '12px', color: '#888', marginBottom: '2px' }}>
-          Settings Schema: {settings.settingsSchema}
-        </div>
-        <div style={{ fontSize: '12px', color: '#888' }}>
-          Last Modified: {new Date().toLocaleString()}
-        </div>
       </div>
 
       {/* Layer 1 - Main Settings Dropdown */}
