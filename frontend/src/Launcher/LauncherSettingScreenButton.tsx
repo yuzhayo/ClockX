@@ -13,7 +13,8 @@ const LauncherSettingScreenButton: React.FC<LauncherSettingScreenButtonProps> = 
   hasChanges,
   saveStatus,
   onSave,
-  onClose
+  onClose,
+  onMinimize
 }) => {
   const { status: updateStatus, forceUpdate } = useUpdateManager();
 
