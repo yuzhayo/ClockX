@@ -25,6 +25,17 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
     setSettings(loadedSettings);
   }, []);
 
+  // Handle floating icon click
+  const handleIconClick = () => {
+    setIsExpanded(true);
+  };
+
+  // Handle panel close
+  const handleClose = () => {
+    setIsExpanded(false);
+    onClose();
+  };
+
   // Update setting and mark as changed
   const updateSetting = (
     group: keyof AppSettings, 
