@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
-import { GestureEvent, Coordinates } from './types';
+import { GestureEvent } from './types';
+import { Coordinates } from './customMapping';
 
 const TAP_THRESHOLD = 300; // ms
 const TAP_DISTANCE_THRESHOLD = 10; // pixels
