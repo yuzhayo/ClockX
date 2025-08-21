@@ -21,7 +21,7 @@ export interface DrawableScreenProps {
 
 // ===== COMPONENT EXPORTS =====
 export { default as LauncherMainScreen } from './LauncherMainScreen';
-export { default as LauncherDrawableScreen } from './LauncherDrawableScreen';
+export { default as LauncherSettingScreen } from './LauncherSettingScreen';
 export { CustomMapping } from './LauncherCustomMapping';
 export { GestureDetection, useGestureDetection } from './LauncherGestureDetection';
 
