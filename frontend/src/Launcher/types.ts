@@ -14,7 +14,3 @@ export interface DrawableScreenProps {
   onClose: () => void;
   onSave: () => void;
 }
-
-export interface MainScreenProps {
-  className?: string;
-}
