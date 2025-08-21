@@ -129,7 +129,7 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
         padding: '20px',
         overflowY: 'auto'
       }}>
-        {/* General Settings Section */}
+        {/* Group 1 Section */}
         <div style={{ marginBottom: '32px' }}>
           <h3 style={{
             color: '#e5e5e5',
@@ -139,121 +139,87 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
             textTransform: 'uppercase',
             letterSpacing: '0.5px'
           }}>
-            General
-          </h3>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {/* Theme Setting */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '12px',
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              borderRadius: '8px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-            }}>
-              <span style={{ color: '#d1d5db', fontSize: '14px' }}>Dark Mode</span>
-              <div style={{
-                width: '44px',
-                height: '24px',
-                backgroundColor: '#2563eb',
-                borderRadius: '12px',
-                position: 'relative',
-                cursor: 'pointer'
-              }}>
-                <div style={{
-                  width: '20px',
-                  height: '20px',
-                  backgroundColor: 'white',
-                  borderRadius: '50%',
-                  position: 'absolute',
-                  top: '2px',
-                  right: '2px',
-                  transition: 'transform 0.2s'
-                }}></div>
-              </div>
-            </div>
-
-            {/* Auto-save Setting */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '12px',
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              borderRadius: '8px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-            }}>
-              <span style={{ color: '#d1d5db', fontSize: '14px' }}>Auto-save</span>
-              <div style={{
-                width: '44px',
-                height: '24px',
-                backgroundColor: '#374151',
-                borderRadius: '12px',
-                position: 'relative',
-                cursor: 'pointer'
-              }}>
-                <div style={{
-                  width: '20px',
-                  height: '20px',
-                  backgroundColor: 'white',
-                  borderRadius: '50%',
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  transition: 'transform 0.2s'
-                }}></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Display Settings Section */}
-        <div style={{ marginBottom: '32px' }}>
-          <h3 style={{
-            color: '#e5e5e5',
-            fontSize: '14px',
-            fontWeight: '600',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.5px'
-          }}>
-            Display
+            Group 1
           </h3>
           
           <div style={{
-            padding: '12px',
+            padding: '16px',
             backgroundColor: 'rgba(255, 255, 255, 0.05)',
             borderRadius: '8px',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center'
           }}>
-            <label style={{ 
-              color: '#d1d5db', 
+            <span style={{ 
+              color: '#888', 
               fontSize: '14px',
-              display: 'block',
-              marginBottom: '8px'
+              fontStyle: 'italic'
             }}>
-              Screen Resolution
-            </label>
-            <select style={{
-              width: '100%',
-              padding: '8px 12px',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              borderRadius: '6px',
-              color: 'white',
-              fontSize: '14px'
-            }}>
-              <option value="auto">Auto</option>
-              <option value="1920x1080">1920x1080</option>
-              <option value="1366x768">1366x768</option>
-              <option value="1280x720">1280x720</option>
-            </select>
+              Group 1 Content
+            </span>
           </div>
         </div>
 
-        {/* Advanced Settings Section */}
+        {/* Group 2 Section */}
+        <div style={{ marginBottom: '32px' }}>
+          <h3 style={{
+            color: '#e5e5e5',
+            fontSize: '14px',
+            fontWeight: '600',
+            marginBottom: '16px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px'
+          }}>
+            Group 2
+          </h3>
+          
+          <div style={{
+            padding: '16px',
+            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: '8px',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center'
+          }}>
+            <span style={{ 
+              color: '#888', 
+              fontSize: '14px',
+              fontStyle: 'italic'
+            }}>
+              Group 2 Content
+            </span>
+          </div>
+        </div>
+
+        {/* Group 3 Section */}
+        <div style={{ marginBottom: '32px' }}>
+          <h3 style={{
+            color: '#e5e5e5',
+            fontSize: '14px',
+            fontWeight: '600',
+            marginBottom: '16px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px'
+          }}>
+            Group 3
+          </h3>
+          
+          <div style={{
+            padding: '16px',
+            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: '8px',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center'
+          }}>
+            <span style={{ 
+              color: '#888', 
+              fontSize: '14px',
+              fontStyle: 'italic'
+            }}>
+              Group 3 Content
+            </span>
+          </div>
+        </div>
+
+        {/* Group 4 Section */}
         <div>
           <h3 style={{
             color: '#e5e5e5',
@@ -263,68 +229,24 @@ const SettingScreen: React.FC<SettingScreenProps> = ({
             textTransform: 'uppercase',
             letterSpacing: '0.5px'
           }}>
-            Advanced
+            Group 4
           </h3>
           
           <div style={{
-            padding: '12px',
+            padding: '16px',
             backgroundColor: 'rgba(255, 255, 255, 0.05)',
             borderRadius: '8px',
             border: '1px solid rgba(255, 255, 255, 0.1)',
-            marginBottom: '16px'
+            textAlign: 'center'
           }}>
-            <button
-              style={{
-                width: '100%',
-                padding: '10px',
-                backgroundColor: 'transparent',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                borderRadius: '6px',
-                color: '#d1d5db',
-                fontSize: '14px',
-                cursor: 'pointer',
-                transition: 'background-color 0.2s'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-              }}
-            >
-              Clear Cache
-            </button>
-          </div>
-
-          {/* Save Button */}
-          <button
-            onClick={onSave}
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              padding: '12px 16px',
-              backgroundColor: '#2563eb',
-              color: 'white',
-              border: 'none',
-              borderRadius: '8px',
-              cursor: 'pointer',
+            <span style={{ 
+              color: '#888', 
               fontSize: '14px',
-              fontWeight: '500',
-              transition: 'background-color 0.2s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#1d4ed8';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#2563eb';
-            }}
-          >
-            <SaveIcon size={16} />
-            Save Settings
-          </button>
+              fontStyle: 'italic'
+            }}>
+              Group 4 Content
+            </span>
+          </div>
         </div>
       </div>
     </div>
